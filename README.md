@@ -1,21 +1,21 @@
 # BBB_Wing
-This is an open source UAV software project, which use node-based architecture with one code base to deploy different targets like ground control software, flight controller, recorders, emulators and etc.
+Это проект программного обеспечения с открытым исходным кодом для БПЛА, который использует архитектуру на основе узлов с одной базой кода для развертывания различных целей, таких как программное обеспечение наземного управления, полетный контроллер, рекордеры, эмуляторы и т.д.
 
-### Dependencies
+### Зависимости
  
-  * C++11 compiler
-  * Qt 5.5 or greater(no-gui targets can be built with lower Qt5 versions)
-  * CMake 2.8.11 or greater
+  * Компилятор C++11
+  * Qt 5.5 или выше (цели без gui могут быть собраны с более низкими версиями Qt5)
+  * CMake 2.8.11 или выше
   * ZeroMQ
-  * Linux I2C header (board only)
-  * GPSD header and development files (board only)
+  * Заголовки Linux I2C (только для платы)
+  * Заголовки и файлы разработки GPSD (только для платы)
  
-#### Ubuntu users can use apt:
+#### Пользователи Ubuntu могут использовать apt:
 ```
   sudo apt-get install cmake libzmq-dev libi2c-dev libgps-dev
 ```
 
-### Building 
+### Сборка 
 ```
 mkdir build
 cd build
@@ -23,10 +23,10 @@ cmake .. -DTARGET_TYPE=<type>
 make
 ```
 
-#### TARGET_TYPE varible can be specified with:
+#### Переменная TARGET_TYPE может быть указана как:
  
-  * board - UAV software, designed to run on single-board computer like Raspberry Pi, Beaglebone Black or others
-  * ground - ground control station with rich graphics interface
-  * all - all possible targets, used by default
+  * board - программное обеспечение БПЛА, предназначенное для запуска на одноплатном компьютере, таком как Raspberry Pi, Beaglebone Black или другие
+  * ground - наземная станция управления с богатым графическим интерфейсом
+  * all - все возможные цели, используется по умолчанию
 
-#### Resulting binaries will be deployed in 'result' folder
+#### Результирующие бинарные файлы будут развернуты в папке 'result'
